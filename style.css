@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Luckiest Guy', cursuve;
+    font-size: 15px;
+    background: radial-gradient(#4a69bd,#2a499d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app{
+    text-align: center;
+    font-size: 40px;
+
+}
+.fancyButton{
+    cursor: pointer;
+    border-radius: 100px;
+padding: 4px;
+background: linear-gradient(#fff,#ccc);
+border: 2px solid #1e3799;
+display: inline-block;
+transform:perspective(400px),rotate(5deg) ;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+margin-bottom: 20px;
+transition: 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+.fancyButton span{
+    padding: 20px 30px;
+    display: inline-block;
+    font-weight: bold;
+    background: linear-gradient(#fa1,#cc8400);
+    border-radius: 45px;
+    text-shadow: 2px 2px 0 #fa1;
+    box-shadow: inset 0 0 10px 2px #b37400,
+                 inset 5px -9px 2px #fa1;
+                 position: relative;
+
+
+
+}
+
+.fancyButton span::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 20px;
+    background: #fff;
+    position: absolute;
+    border-radius: 30px;
+    opacity: 0.4;
+    transition: inherit;
+}
+.fancyButton:hover{
+    transform: perspective(400px )
+    rotateY(-5deg);
+
+}
+.fancyButton:hover span{
+    box-shadow:  inset 0 0 30px 2px #b37400,
+                 inset -10px -9px 2px #fa1;
+}
+.fancyButton:hover span::before{
+    margin-left: 10px;
+    width: 30px;
+    
+}
+.fancyButton:active{
+    top: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.fancyButton:active  span::before{
+    margin-left: 8px;
+    width: 25px;
+}
